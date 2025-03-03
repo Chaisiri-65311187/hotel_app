@@ -103,7 +103,13 @@ class _MyHomePageState extends State<MyHomePage> {
   elevation: 4, // เพิ่มเงาให้ดูมีมิติ
   child: ListTile(
     contentPadding: const EdgeInsets.all(16),
-    leading: Icon(Icons.hotel, color: Colors.purple.shade700),
+    leading: CircleAvatar(
+      backgroundColor: Colors.purple.shade700,
+      child: Text(
+        "${index + 1}", // เลขลำดับรายการ
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+      ),
+    ),
     title: Text(
       booking.name,
       style: TextStyle(fontWeight: FontWeight.bold),
